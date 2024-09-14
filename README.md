@@ -80,7 +80,7 @@ To install SQLAlchemy, follow these steps:
 - Open the vscode or any python editer
 - write a given code to load the database. code given below.
 
-```ptyhon
+```python
 # import pandas and sqlalchemy for load dataset in portgresql
 import pandas as pd
 from sqlalchemy import create_engine
