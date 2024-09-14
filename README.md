@@ -7,33 +7,33 @@
 - Download the latest version of Python for your operating system.
 
 
-### Run the Installer:
+### 2. Run the Installer:
 - Open the downloaded installer.
 - Check the box that says "Add Python to PATH."
 - Click "Install Now" to begin the installation process.
 
 
- ### Verify Installation:
+ ### 3. Verify Installation:
 - Open a command prompt or terminal.
 - Type `python --version` (or `python3 --version` on some systems) and press Enter.
 - Ensure that the version number is displayed, confirming that Python is installed.
 - `pip` is usually included with Python. To check if it’s installed, type `pip --version` in the command prompt.
 
 
-### Run the Installer pandas, psycopy2 & sqlalchemy:
+### 4. Run the Installer pandas, psycopy2 & sqlalchemy:
 
-#### pandas
+#### 1. pandas
 To install pandas, follow these steps:
 - Open a command prompt or terminal.
 - Type `pip install pandas` and press Enter to download and install.
 
 
-#### psycopy2
+#### 2. psycopy2
 To install `psycopg2`, which is a popular PostgreSQL adapter for Python, follow these steps:
 - Open a command prompt or terminal.
 - Type `pip install psycopg2` and press Enter to download and install.
 
-## connect python and postgresql
+### 3. connect python and postgresql
 to find out your connection credentials
 - open postgresql and select main database `postgres` and right click and select `properties`.
 - open a connection tab in the properties panal
@@ -70,10 +70,47 @@ conn.close()
 ```
 
 
-#### sqlalchemy
+#### 4. sqlalchemy
 To install SQLAlchemy, follow these steps:
 - Open a command prompt or terminal.
 - Type `pip install sqlalchemy` and press Enter to download and install.
 
 
-That’s it! Python should now be installed and ready for you to start coding.
+## load dataset in postgres database
+- Open the vscode or any python editer
+- write a given code to load the database. code given below.
+
+```ptyhon
+# import pandas and sqlalchemy for load dataset in portgresql
+import pandas as pd
+from sqlalchemy import create_engine
+
+
+# creating SQL Alchemy engine object to connect severs
+# can you use your database connection postgresql://username:password@localhost/database
+# this database connection is mine z
+conn_string = 'postgresql://postgres:Admin@localhost/painting_p004'
+db = create_engine(conn_string)
+
+
+# Initializing connection to the databse
+conn = db.connect()
+
+# list the csv file to load in the database
+files = ['canvas_size', 'image_link', 'museum_hours', 'museum', 'product_size', 'subject', 'work']
+
+# create a for lop to rreperate porcess untile the files end 
+for file in files:
+
+    # load the dataframe as df into the database 
+    df = pd.read_csv(f"C:\\Users\\smohe\\OneDrive\\Desktop\\SQL\\projects\\project_004\\dataset\\{file}.csv")
+    # the 'if_exists' can be 'fail' 'replace' or 'append' if exists is check the talble already exists or not if exists this step replace a table
+    df.to_sql(file, con=conn, if_exists='replace', index=False)
+
+
+# after click run button its take few sec to load dataset in database 
+# after conplete the process you go to the databse refresh and check your databse 
+```
+
+
+That’s it! Python should now be installed and ready for you to explore.
