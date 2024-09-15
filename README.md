@@ -39,7 +39,7 @@ To install `psycopg2`, which is a popular PostgreSQL adapter for Python, follow 
 - Open a command prompt or terminal.
 - Type `pip install psycopg2` and press Enter to download and install.
 
-#### 4. sqlalchemy
+#### 3. sqlalchemy
 To install SQLAlchemy, follow these steps:
 - Open a command prompt or terminal.
 - Type `pip install sqlalchemy` and press Enter to download and install.
