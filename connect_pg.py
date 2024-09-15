@@ -12,7 +12,7 @@ conn = psycopg2.connect(
 
 cur = conn.cursor()
 
-# you can create a table using in the code 
+# if you write a sql in the python use this method to create table, alter table, insert data & etc..
 # cur.execute("""CREATE TABLE IF NOT EXISTS person (
             
 #     id          INT PRIMARY KEY,
