@@ -39,7 +39,12 @@ To install `psycopg2`, which is a popular PostgreSQL adapter for Python, follow 
 - Open a command prompt or terminal.
 - Type `pip install psycopg2` and press Enter to download and install.
 
-### 3. connect python and postgresql
+#### 4. sqlalchemy
+To install SQLAlchemy, follow these steps:
+- Open a command prompt or terminal.
+- Type `pip install sqlalchemy` and press Enter to download and install.
+
+### 5. connect python and postgresql
 to find out your connection credentials
 - open postgresql and select main database `postgres` and right click and select `properties`.
 - open a connection tab in the properties panal
@@ -76,13 +81,8 @@ conn.close()
 ```
 
 
-#### 4. sqlalchemy
-To install SQLAlchemy, follow these steps:
-- Open a command prompt or terminal.
-- Type `pip install sqlalchemy` and press Enter to download and install.
 
-
-### 5. load dataset in postgres database
+### 6. load dataset in postgres database
 - Open the vscode or any python editer
 - write a given code to load the database. code given below.
 
