@@ -82,7 +82,7 @@ To install SQLAlchemy, follow these steps:
 - Type `pip install sqlalchemy` and press Enter to download and install.
 
 
-## load dataset in postgres database
+### 5. load dataset in postgres database
 - Open the vscode or any python editer
 - write a given code to load the database. code given below.
 
