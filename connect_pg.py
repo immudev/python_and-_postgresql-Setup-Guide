@@ -12,6 +12,7 @@ conn = psycopg2.connect(
 
 cur = conn.cursor()
 
+# you can create a table using in the code 
 # cur.execute("""CREATE TABLE IF NOT EXISTS person (
             
 #     id          INT PRIMARY KEY,
