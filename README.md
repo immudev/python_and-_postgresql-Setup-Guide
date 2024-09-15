@@ -1,6 +1,12 @@
 # python_and_postgresql-Setup-Guide
 
-## setup Python
+## Project Overview
+
+**Project Title**: Retail Sales Analysis  
+**Level**: Beginner  
+**Database**: `retail_sales`
+
+## Project Structure
 
 ### 1. Download Python:
 - Go to the [official Python website](https://www.python.org/downloads/).
